@@ -9,6 +9,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonToggleComponent } from './material/button-toggle/button-toggle.component';
+import { SpinnerComponent } from './material/spinner/spinner.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ButtonToggleComponent } from './material/button-toggle/button-toggle.co
     ButtonComponent,
     ButtonToggleComponent,
     IconComponent,
-    BagesComponent
+    BagesComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,

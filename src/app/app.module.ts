@@ -1,3 +1,4 @@
+import { HeadingComponent } from './material/typography/heading/heading.component';
 import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -8,7 +9,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeadingComponent,
   ],
   imports: [
     BrowserModule,

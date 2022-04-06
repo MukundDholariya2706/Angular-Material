@@ -1,3 +1,4 @@
+import { IconComponent } from './material/icon/icon.component';
 import { ButtonComponent } from './material/button/button.component';
 import { HeadingComponent } from './material/typography/heading.component';
 import { MaterialModule } from './material/material.module';
@@ -15,6 +16,7 @@ import { ButtonToggleComponent } from './material/button-toggle/button-toggle.co
     HeadingComponent,
     ButtonComponent,
     ButtonToggleComponent,
+    IconComponent
   ],
   imports: [
     BrowserModule,

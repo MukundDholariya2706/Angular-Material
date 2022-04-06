@@ -1,0 +1,25 @@
+<div>
+  <span matBadge="1">notification</span>
+</div>
+<div>
+  <span matBadge="1" matBadgePosition="below before">notification</span>
+</div>
+<div>
+  <span matBadge="1" matBadgePosition="below after">notification</span>
+</div>
+<div>
+  <span matBadge="1" matBadgePosition="above before">notification</span>
+</div>
+
+matBadgeSize = "small / medium / large" <br>
+matBadgeColor = "primary / accent / warn"
+
+overlap badge
+<div>
+  <span matBadge="1" matBadgeOverlap="false">notification</span>
+</div>
+
+<div>
+  <span [matBadge]="notification" [matBadgeHidden]="notification === 0" matBadgeOverlap="false">notification</span>
+</div>
+

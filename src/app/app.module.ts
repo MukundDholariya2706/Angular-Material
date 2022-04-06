@@ -1,3 +1,4 @@
+import { BagesComponent } from './material/bages/bages.component';
 import { IconComponent } from './material/icon/icon.component';
 import { ButtonComponent } from './material/button/button.component';
 import { HeadingComponent } from './material/typography/heading.component';
@@ -16,7 +17,8 @@ import { ButtonToggleComponent } from './material/button-toggle/button-toggle.co
     HeadingComponent,
     ButtonComponent,
     ButtonToggleComponent,
-    IconComponent
+    IconComponent,
+    BagesComponent
   ],
   imports: [
     BrowserModule,

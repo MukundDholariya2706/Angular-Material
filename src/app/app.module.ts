@@ -1,3 +1,4 @@
+import { ButtonComponent } from './material/button/button/button.component';
 import { HeadingComponent } from './material/typography/heading/heading.component';
 import { MaterialModule } from './material/material.module';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   declarations: [
     AppComponent,
     HeadingComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

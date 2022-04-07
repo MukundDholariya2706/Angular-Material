@@ -1,0 +1,27 @@
+<!-- navbar -->
+<mat-toolbar color="primary" class="navbar">
+    <div>Max</div>
+    <div>
+        <span>Home</span>
+        <span>About</span>
+        <span>Service</span>
+    </div>
+</mat-toolbar>
+
+<!-- sidenavbar -->
+mode = [over , push , side ]
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" (opened)="log('Opened')" (closed)="log('closed')" [(opened)]="opened" >Sidenav</mat-sidenav>
+    <mat-sidenav-content>Main
+        <!-- open and close -->
+        <button (click)="opened = !opened">Toggle Opened</button>
+
+        <!-- open and close -->
+        <button (click)="sidenav.open()">Open</button>
+        <button (click)="sidenav.close()">Close</button>
+
+        <!-- open and close -->
+        <button (click)="sidenav.toggle()">Toggle</button>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

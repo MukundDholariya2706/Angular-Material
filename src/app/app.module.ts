@@ -1,3 +1,4 @@
+import { NavbarComponent } from './material/navbar/navbar.component';
 import { BagesComponent } from './material/bages/bages.component';
 import { IconComponent } from './material/icon/icon.component';
 import { ButtonComponent } from './material/button/button.component';
@@ -10,6 +11,8 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonToggleComponent } from './material/button-toggle/button-toggle.component';
 import { SpinnerComponent } from './material/spinner/spinner.component';
+import { TableComponent } from './material/table/table.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -20,12 +23,15 @@ import { SpinnerComponent } from './material/spinner/spinner.component';
     ButtonToggleComponent,
     IconComponent,
     BagesComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    NavbarComponent,
+    TableComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,6 +13,7 @@ import { ButtonToggleComponent } from './material/button-toggle/button-toggle.co
 import { SpinnerComponent } from './material/spinner/spinner.component';
 import { TableComponent } from './material/table/table.component';
 import { FormsModule } from '@angular/forms';
+import { MenuComponent } from './material/menu/menu.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     SpinnerComponent,
     NavbarComponent,
     TableComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,

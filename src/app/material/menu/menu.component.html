@@ -1,0 +1,27 @@
+<mat-menu #appMenu="matMenu">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
+  <button mat-menu-item>BackEnd</button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="appMenu">Menu</button>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item>Vue</button>
+</mat-menu>
+
+<mat-menu #lazyMenu="matMenu">
+  <ng-template matMenuContent let-name="name" let-setup="setup">
+    <button mat-menu-item>setting</button>
+    <button mat-menu-item>Type is {{setup}}</button>
+    <button mat-menu-item>Log out {{ name }}</button>
+  </ng-template>
+</mat-menu>
+
+<button [matMenuTriggerData]="{ name: 'Pc', setup: 'Intel' }" [matMenuTriggerFor]="lazyMenu">
+  Pc
+</button>
+<button [matMenuTriggerData]="{ name: 'Mac', setup: 'Apple' }" [matMenuTriggerFor]="lazyMenu">
+  Mac
+</button>

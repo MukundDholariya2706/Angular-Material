@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './material/menu/menu.component';
 import { ListComponent } from './material/list/list.component';
 import { GridListComponent } from './material/grid-list/grid-list.component';
+import { ExpansionPanelComponent } from './material/expansion-panel/expansion-panel.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { GridListComponent } from './material/grid-list/grid-list.component';
     TableComponent,
     MenuComponent,
     ListComponent,
-    GridListComponent
+    GridListComponent,
+    ExpansionPanelComponent,
   ],
   imports: [
     BrowserModule,

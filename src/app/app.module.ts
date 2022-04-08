@@ -18,6 +18,7 @@ import { ListComponent } from './material/list/list.component';
 import { GridListComponent } from './material/grid-list/grid-list.component';
 import { ExpansionPanelComponent } from './material/expansion-panel/expansion-panel.component';
 import { CardComponent } from './material/card/card.component';
+import { TabsComponent } from './material/tabs/tabs.component';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { CardComponent } from './material/card/card.component';
     GridListComponent,
     ExpansionPanelComponent,
     CardComponent,
+    TabsComponent,
   ],
   imports: [
     BrowserModule,

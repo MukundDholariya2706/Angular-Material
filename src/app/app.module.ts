@@ -15,6 +15,7 @@ import { TableComponent } from './material/table/table.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './material/menu/menu.component';
 import { ListComponent } from './material/list/list.component';
+import { GridListComponent } from './material/grid-list/grid-list.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ListComponent } from './material/list/list.component';
     NavbarComponent,
     TableComponent,
     MenuComponent,
-    ListComponent
+    ListComponent,
+    GridListComponent
   ],
   imports: [
     BrowserModule,

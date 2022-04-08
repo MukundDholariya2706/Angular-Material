@@ -14,6 +14,7 @@ import { SpinnerComponent } from './material/spinner/spinner.component';
 import { TableComponent } from './material/table/table.component';
 import { FormsModule } from '@angular/forms';
 import { MenuComponent } from './material/menu/menu.component';
+import { ListComponent } from './material/list/list.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { MenuComponent } from './material/menu/menu.component';
     SpinnerComponent,
     NavbarComponent,
     TableComponent,
-    MenuComponent
+    MenuComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

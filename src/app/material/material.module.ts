@@ -26,6 +26,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatDialogModule } from '@angular/material/dialog';
 import { DialogExampleComponent } from './dialog-example/dialog-example.component';
+import { MatTableModule } from '@angular/material/table';
 
 const MaterialComponents = [
   MatButtonModule,
@@ -54,6 +55,7 @@ const MaterialComponents = [
   MatTooltipModule,
   MatSnackBarModule,
   MatDialogModule,
+  MatTableModule
 ];
 
 @NgModule({

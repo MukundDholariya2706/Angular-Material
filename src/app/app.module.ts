@@ -1,3 +1,4 @@
+import { DataTableComponent } from './material/data-table/data-table.component';
 import { DialogExampleComponent } from './material/dialog-example/dialog-example.component';
 import { SnackbarComponent } from './material/snackbar/snackbar.component';
 import { DateRangeComponent } from './material/date-range/date-range.component';
@@ -60,7 +61,8 @@ import { DialogComponent } from './material/dialog/dialog.component';
     DateRangeComponent,
     TooltipComponent,
     SnackbarComponent,
-    DialogComponent
+    DialogComponent,
+    DataTableComponent,
    ],
   entryComponents: [DialogExampleComponent],
   imports: [

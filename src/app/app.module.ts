@@ -28,6 +28,7 @@ import { CRButtonComponent } from './material/CR-button/CR-button.component';
 import { DateComponent } from './material/date/date.component';
 import { CommonModule } from '@angular/common';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { TooltipComponent } from './material/tooltip/tooltip.component';
 
 
 @NgModule({
@@ -53,7 +54,8 @@ import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
     AutocompleteComponent,
     CRButtonComponent,
     DateComponent,
-    DateRangeComponent
+    DateRangeComponent,
+    TooltipComponent
    ],
   imports: [
     BrowserModule,

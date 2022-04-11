@@ -24,6 +24,8 @@ import { StepperComponent } from './material/stepper/stepper.component';
 import { InputComponent } from './material/input/input.component';
 import { SelectComponent } from './material/select/select.component';
 import { CRButtonComponent } from './material/CR-button/CR-button.component';
+import { DateComponent } from './material/date/date.component';
+import { CommonModule } from '@angular/common';
 
 
 @NgModule({
@@ -48,13 +50,15 @@ import { CRButtonComponent } from './material/CR-button/CR-button.component';
     SelectComponent,
     AutocompleteComponent,
     CRButtonComponent,
+    DateComponent,
    ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,4 @@
+import { DateRangeComponent } from './material/date-range/date-range.component';
 import { AutocompleteComponent } from './material/autocomplete/autocomplete.component';
 import { NavbarComponent } from './material/navbar/navbar.component';
 import { BagesComponent } from './material/bages/bages.component';
@@ -26,6 +27,7 @@ import { SelectComponent } from './material/select/select.component';
 import { CRButtonComponent } from './material/CR-button/CR-button.component';
 import { DateComponent } from './material/date/date.component';
 import { CommonModule } from '@angular/common';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 
 
 @NgModule({
@@ -51,6 +53,7 @@ import { CommonModule } from '@angular/common';
     AutocompleteComponent,
     CRButtonComponent,
     DateComponent,
+    DateRangeComponent
    ],
   imports: [
     BrowserModule,
@@ -58,7 +61,8 @@ import { CommonModule } from '@angular/common';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    CommonModule
+    CommonModule,
+    NgxDaterangepickerMd.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -46,7 +46,7 @@ const MaterialComponents = [
   MatCheckboxModule,
   MatRadioModule,
   MatDatepickerModule,
-  MatNativeDateModule
+  MatNativeDateModule,
 ];
 
 @NgModule({

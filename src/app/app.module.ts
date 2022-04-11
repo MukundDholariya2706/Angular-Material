@@ -12,7 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ButtonToggleComponent } from './material/button-toggle/button-toggle.component';
 import { SpinnerComponent } from './material/spinner/spinner.component';
 import { TableComponent } from './material/table/table.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MenuComponent } from './material/menu/menu.component';
 import { ListComponent } from './material/list/list.component';
 import { GridListComponent } from './material/grid-list/grid-list.component';
@@ -20,6 +20,7 @@ import { ExpansionPanelComponent } from './material/expansion-panel/expansion-pa
 import { CardComponent } from './material/card/card.component';
 import { TabsComponent } from './material/tabs/tabs.component';
 import { StepperComponent } from './material/stepper/stepper.component';
+import { InputComponent } from './material/input/input.component';
 
 
 @NgModule({
@@ -40,12 +41,14 @@ import { StepperComponent } from './material/stepper/stepper.component';
     CardComponent,
     TabsComponent,
     StepperComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

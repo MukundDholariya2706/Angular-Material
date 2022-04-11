@@ -1,3 +1,4 @@
+import { SnackbarComponent } from './material/snackbar/snackbar.component';
 import { DateRangeComponent } from './material/date-range/date-range.component';
 import { AutocompleteComponent } from './material/autocomplete/autocomplete.component';
 import { NavbarComponent } from './material/navbar/navbar.component';
@@ -55,7 +56,8 @@ import { TooltipComponent } from './material/tooltip/tooltip.component';
     CRButtonComponent,
     DateComponent,
     DateRangeComponent,
-    TooltipComponent
+    TooltipComponent,
+    SnackbarComponent
    ],
   imports: [
     BrowserModule,

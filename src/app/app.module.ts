@@ -1,3 +1,4 @@
+import { DialogExampleComponent } from './material/dialog-example/dialog-example.component';
 import { SnackbarComponent } from './material/snackbar/snackbar.component';
 import { DateRangeComponent } from './material/date-range/date-range.component';
 import { AutocompleteComponent } from './material/autocomplete/autocomplete.component';
@@ -30,6 +31,7 @@ import { DateComponent } from './material/date/date.component';
 import { CommonModule } from '@angular/common';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { TooltipComponent } from './material/tooltip/tooltip.component';
+import { DialogComponent } from './material/dialog/dialog.component';
 
 
 @NgModule({
@@ -57,8 +59,10 @@ import { TooltipComponent } from './material/tooltip/tooltip.component';
     DateComponent,
     DateRangeComponent,
     TooltipComponent,
-    SnackbarComponent
+    SnackbarComponent,
+    DialogComponent
    ],
+  entryComponents: [DialogExampleComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -1,3 +1,4 @@
+import { AutocompleteComponent } from './material/autocomplete/autocomplete.component';
 import { NavbarComponent } from './material/navbar/navbar.component';
 import { BagesComponent } from './material/bages/bages.component';
 import { IconComponent } from './material/icon/icon.component';
@@ -43,7 +44,8 @@ import { SelectComponent } from './material/select/select.component';
     TabsComponent,
     StepperComponent,
     InputComponent,
-    SelectComponent
+    SelectComponent,
+    AutocompleteComponent,
    ],
   imports: [
     BrowserModule,

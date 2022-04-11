@@ -1,0 +1,44 @@
+<mat-form-field>
+  <mat-label>Topic</mat-label>
+  <mat-select [(value)]="selectedValue" multiple>
+    <mat-option>None</mat-option>
+    <mat-option value="angular">Angular</mat-option>
+    <mat-option value="react">React</mat-option>
+    <mat-option value="vue">Vue</mat-option>
+  </mat-select>
+</mat-form-field>
+
+{{ selectedValue }}
+
+<br>
+
+<mat-form-field>
+  <mat-label>Topic</mat-label>
+  <mat-select>
+    <mat-option>None</mat-option>
+    <mat-optgroup label="Web">
+      <mat-option value="angular">Angular</mat-option>
+      <mat-option value="react">React</mat-option>
+      <mat-option value="vue">Vue</mat-option>
+    </mat-optgroup>
+    <mat-optgroup label="Mobile">
+      <mat-option value="ionic">Ionic</mat-option>
+      <mat-option value="reactnative">React Native</mat-option>
+    </mat-optgroup>
+  </mat-select>
+</mat-form-field>
+
+<br>
+<!-- select with error -->
+<mat-form-field>
+  <mat-label>Topic</mat-label>
+  <mat-select [formControl]="selectFormControl" required>
+    <mat-option>None</mat-option>
+    <mat-option value="angular">Angular</mat-option>
+    <mat-option value="react">React</mat-option>
+    <mat-option value="vue">Vue</mat-option>
+  </mat-select>
+  <mat-error *ngIf="selectFormControl.hasError('required')">Please Select Field</mat-error>
+  <mat-hint>{{selectFormControl.value}}</mat-hint>
+</mat-form-field>
+

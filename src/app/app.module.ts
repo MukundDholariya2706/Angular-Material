@@ -21,10 +21,11 @@ import { CardComponent } from './material/card/card.component';
 import { TabsComponent } from './material/tabs/tabs.component';
 import { StepperComponent } from './material/stepper/stepper.component';
 import { InputComponent } from './material/input/input.component';
+import { SelectComponent } from './material/select/select.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [	
     AppComponent,
     HeadingComponent,
     ButtonComponent,
@@ -42,7 +43,8 @@ import { InputComponent } from './material/input/input.component';
     TabsComponent,
     StepperComponent,
     InputComponent,
-  ],
+    SelectComponent
+   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

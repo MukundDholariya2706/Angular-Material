@@ -23,6 +23,7 @@ import { TabsComponent } from './material/tabs/tabs.component';
 import { StepperComponent } from './material/stepper/stepper.component';
 import { InputComponent } from './material/input/input.component';
 import { SelectComponent } from './material/select/select.component';
+import { CRButtonComponent } from './material/CR-button/CR-button.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { SelectComponent } from './material/select/select.component';
     InputComponent,
     SelectComponent,
     AutocompleteComponent,
+    CRButtonComponent,
    ],
   imports: [
     BrowserModule,

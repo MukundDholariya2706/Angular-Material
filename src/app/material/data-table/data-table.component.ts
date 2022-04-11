@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 export interface PeriodicElement {
@@ -27,12 +29,20 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./data-table.component.css'],
 })
 export class DataTableComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit() {}
-
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+  
+  constructor() {}
+  
+  @ViewChild(MatSort) sort!: MatSort;
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+  
+
+  ngOnInit() {
+    this.dataSource.sort = this.sort;
+    this.dataSource.paginator = this.paginator;
+  }
+
 
   logData(row: any){
     console.log(row);
@@ -42,4 +52,6 @@ export class DataTableComponent implements OnInit {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
+
+
 }

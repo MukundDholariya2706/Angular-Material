@@ -33,7 +33,7 @@ import { CommonModule } from '@angular/common';
 import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { TooltipComponent } from './material/tooltip/tooltip.component';
 import { DialogComponent } from './material/dialog/dialog.component';
-
+import { ScrollingModule } from '@angular/cdk/scrolling';
 
 @NgModule({
   declarations: [	
@@ -72,7 +72,8 @@ import { DialogComponent } from './material/dialog/dialog.component';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    NgxDaterangepickerMd.forRoot()
+    NgxDaterangepickerMd.forRoot(),
+    ScrollingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

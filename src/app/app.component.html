@@ -22,4 +22,11 @@
 <!-- <app-snackbar></app-snackbar> -->
 <!-- <app-snackbar></app-snackbar> -->
 <!-- <app-dialog></app-dialog> -->
-<app-data-table></app-data-table>
+<!-- <app-data-table></app-data-table> -->
+
+<cdk-virtual-scroll-viewport itemSize="100" class="container">
+    <div *cdkVirtualFor="let number of numbers" class="number">
+    {{ number }}
+    </div>
+</cdk-virtual-scroll-viewport>
+

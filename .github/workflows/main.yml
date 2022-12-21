@@ -27,7 +27,7 @@ jobs:
         env:
           SSH_DEPLOY_KEY: ${{secrets.API_TOKEN_GITHUB}}
         with:
-          source-directory: public/
+          source-directory: dist/
           destination-github-username: 'MukundDholariya2706'
           destination-repository-name: 'angular-material-build'
           user-email: 'mukunddtridhyatech@gmail.com'

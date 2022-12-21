@@ -22,4 +22,13 @@ jobs:
         run: npm run ng version
       - name: Build
         run: npm run build
-        
+      - name: Deploy to external repository
+        uses: 'cpina/github-action-push-to-another-repository@main'
+        env:
+          SSH_DEPLOY_KEY: ${{secrets.SSH_DEPLOY_KEY}}
+        with:
+          source-directory: public/
+          destination-github-username: 'MukundDholariya2706'
+          destination-repository-name: 'angular-material-build'
+          user-email: 'mukunddtridhyatech@gmail.com'
+          target-branch: "main"

@@ -33,7 +33,8 @@ import { CommonModule } from '@angular/common';
 import { TooltipComponent } from './material/tooltip/tooltip.component';
 import { DialogComponent } from './material/dialog/dialog.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
-
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 @NgModule({
   declarations: [	
     AppComponent,
@@ -71,7 +72,13 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    ScrollingModule
+    ScrollingModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

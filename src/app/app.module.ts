@@ -66,7 +66,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
    ],
   entryComponents: [DialogExampleComponent],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     MaterialModule,
     FormsModule,

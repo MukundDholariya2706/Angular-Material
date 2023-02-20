@@ -30,7 +30,6 @@ import { SelectComponent } from './material/select/select.component';
 import { CRButtonComponent } from './material/CR-button/CR-button.component';
 import { DateComponent } from './material/date/date.component';
 import { CommonModule } from '@angular/common';
-import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
 import { TooltipComponent } from './material/tooltip/tooltip.component';
 import { DialogComponent } from './material/dialog/dialog.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -72,7 +71,6 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     FormsModule,
     ReactiveFormsModule,
     CommonModule,
-    NgxDaterangepickerMd.forRoot(),
     ScrollingModule
   ],
   providers: [],

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { LocaleConfig } from 'ngx-daterangepicker-material/daterangepicker.config';
 
 
 @Component({
@@ -10,10 +9,7 @@ import { LocaleConfig } from 'ngx-daterangepicker-material/daterangepicker.confi
 })
 export class DateRangeComponent implements OnInit {
   form!: FormGroup;
-  locale: LocaleConfig = {
-    format: 'YYYY-MM-DD',
-    displayFormat: 'YYYY-MM-DD',
-  };
+
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({

@@ -28,7 +28,6 @@
     "@nguniversal/express-engine": "13.0.2",
     "express": "^4.15.2",
     "ngx-daterange": "^1.0.18",
-    "ngx-daterangepicker-material": "^2.4.2",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

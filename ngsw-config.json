@@ -39,7 +39,7 @@
         "https://jsonplaceholder.typicode.com/posts"
       ],
       "cacheConfig": {
-        "maxSize": 5,
+        "maxSize": 100,
         "maxAge": "6h",
         "timeout": "10s",
         "strategy": "freshness"

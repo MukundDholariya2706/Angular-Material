@@ -35,6 +35,7 @@ import { DialogComponent } from './material/dialog/dialog.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [	
     AppComponent,
@@ -79,6 +80,7 @@ import { environment } from '../environments/environment';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

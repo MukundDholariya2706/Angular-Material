@@ -32,23 +32,23 @@ jobs:
           destination-repository-name: "angular-material-build"
           user-email: "mukunddtridhyatech@gmail.com"
           target-branch: "main"
-      - name: Install mail command
-        run: | 
-          sudo apt-get install -y mailutils
-          echo "mailutils install"
-      - name: Send Email on Success
-        if: success()
-        run: |
-          echo "Subject: Workflow Succeeded" > email.txt
-          echo "Your Workflow has succeeded!" >> email.txt
-          mail -s "Subject: Workflow Succeeded" mukunddtridhyatech@gmail.com < email.txt
-        env:
-          MAILTO: mukunddtridhyatech@gmail.com
-      - name: Send Email on Failure
-        if: failure()
-        run: |
-          echo "Subject: Workflow Failed" > email.txt
-          echo "Your workflow has failed! Please check the GitHub Actions logs for details." >> email.txt
-          mail -s "Testing fail" mukunddtridhyatech@gmail.com
-        env:
-          MAILTO: mukunddtridhyatech@gmail.com
+      # - name: Install mail command
+      #   run: | 
+      #     sudo apt-get install -y mailutils
+      #     echo "mailutils install"
+      # - name: Send Email on Success
+      #   if: success()
+      #   run: |
+      #     echo "Subject: Workflow Succeeded" > email.txt
+      #     echo "Your Workflow has succeeded!" >> email.txt
+      #     cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
+      #   env:
+      #     MAILTO: mukunddtridhyatech@gmail.com
+      # - name: Send Email on Failure
+      #   if: failure()
+      #   run: |
+      #     echo "Subject: Workflow Failed" > email.txt
+      #     echo "Your workflow has failed! Please check the GitHub Actions logs for details." >> email.txt
+      #     cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
+      #   env:
+      #     MAILTO: mukunddtridhyatech@gmail.com

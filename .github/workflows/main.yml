@@ -41,7 +41,7 @@ jobs:
         run: |
           echo "Subject: Workflow Succeeded" > email.txt
           echo "Your Workflow has succeeded!" >> email.txt
-          cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
+          mail -s "Subject: Workflow Succeeded" mukunddtridhyatech@gmail.com < email.txt
         env:
           MAILTO: mukunddtridhyatech@gmail.com
       - name: Send Email on Failure

@@ -15,20 +15,28 @@ export class AppComponent {
   constructor(
     @Inject(PLATFORM_ID) private platformId: any,
     private http: HttpClient,
-    private update: SwUpdate,
-    private checkupdateService: CheckupdateService
-  ) {
-    // for (let i = 0; i < 100; i++) {
-    //   this.numbers.push(i);
-    // }
-    try {
-      if (!update.isEnabled) return;
-      this.update.checkForUpdate().then((res) => {
-        console.log('Update AppComponent :>> ', res);
-      });
-    } catch (e) {}
+    private update: SwUpdate
+  ) // private checkupdateService: CheckupdateService
+  {
+    console.log(
+      'update.isEnabled, !update.isEnabled :>> ',
+      update.isEnabled,
+      !update.isEnabled
+    );
 
-    console.log('this.platformId :>> ', this.platformId);
+    this.update.checkForUpdate().then((res) => {
+      if (res) window.location.reload();
+    });
+
+    if (this.update.isEnabled) {
+      this.update.available.subscribe((res: any) => {
+        console.log('res :>> ', res);
+        if (confirm('New version available. Load New Version?')) {
+          window.location.reload();
+        }
+      });
+    }
+
     if (isPlatformBrowser(this.platformId)) {
       // run on local
     } else {

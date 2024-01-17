@@ -8,7 +8,8 @@ import { concat, interval } from 'rxjs';
 })
 export class CheckupdateService {
 
-  constructor(appRef: ApplicationRef, update: SwUpdate) { 
+  constructor(appRef: ApplicationRef, update: SwUpdate) {
+    console.log(' :>> ',update.isEnabled );
     if(!update.isEnabled) return;
     const appIsStable$ = appRef.isStable.pipe(
       first(isStable => isStable === true));

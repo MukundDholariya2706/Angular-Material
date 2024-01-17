@@ -43,7 +43,7 @@ jobs:
       - name: Send Email on Success
         if: success()
         run: |
-          mail -s Workflow Succeeded mukunddtridhyatech@gmail.com
+          mail -s "Workflow Succeeded" mukunddtridhyatech@gmail.com
         env:
           MAILTO: mukunddtridhyatech@gmail.com
       - name: Send Email on Failure

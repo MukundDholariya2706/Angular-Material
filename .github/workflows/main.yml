@@ -32,3 +32,22 @@ jobs:
           destination-repository-name: 'angular-material-build'
           user-email: 'mukunddtridhyatech@gmail.com'
           target-branch: "main"
+      - name: Send Email on Success
+        if: ${{github.event.workflow_run.conclusion == 'success'}}
+        run: |
+          echo "Subject: Workflow Succeeded" > email.txt
+          echo "Your Workflow has succeeded!" >> email.txt
+          cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
+        env:
+          MAILTO: mukunddtridhyatech@gmail.com
+
+      - name: Send Email on Failure
+        if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+        run: |
+          echo "Subject: Workflow Failed" > email.txt
+          echo "Your workflow has failed! Please check the GitHub Actions logs for details." >> email.txt
+          cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
+        env:
+          MAILTO: mukunddtridhyatech@gmail.com
+
+

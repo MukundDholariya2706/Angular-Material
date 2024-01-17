@@ -15,7 +15,7 @@ jobs:
       - name: Use Node 14.19.0
         uses: actions/setup-node@v2
         with:
-          node-version: '14.19.0'
+          node-version: "14.19.0"
       - name: Install dependencies
         run: npm install
       - name: Printing angular version
@@ -23,31 +23,28 @@ jobs:
       - name: Build
         run: npm run build:ssr
       - name: Deploy to external repository
-        uses: 'cpina/github-action-push-to-another-repository@main'
+        uses: "cpina/github-action-push-to-another-repository@main"
         env:
           API_TOKEN_GITHUB: ${{secrets.API_TOKEN_GITHUB}}
         with:
           source-directory: dist/
-          destination-github-username: 'MukundDholariya2706'
-          destination-repository-name: 'angular-material-build'
-          user-email: 'mukunddtridhyatech@gmail.com'
+          destination-github-username: "MukundDholariya2706"
+          destination-repository-name: "angular-material-build"
+          user-email: "mukunddtridhyatech@gmail.com"
           target-branch: "main"
       - name: Send Email on Success
-        if: ${{github.event.workflow_run.conclusion == 'success'}}
+        if: success()
         run: |
           echo "Subject: Workflow Succeeded" > email.txt
           echo "Your Workflow has succeeded!" >> email.txt
           cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
         env:
           MAILTO: mukunddtridhyatech@gmail.com
-
       - name: Send Email on Failure
-        if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+        if: failure()
         run: |
           echo "Subject: Workflow Failed" > email.txt
           echo "Your workflow has failed! Please check the GitHub Actions logs for details." >> email.txt
           cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
         env:
           MAILTO: mukunddtridhyatech@gmail.com
-
-

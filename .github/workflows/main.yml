@@ -33,8 +33,9 @@ jobs:
           user-email: "mukunddtridhyatech@gmail.com"
           target-branch: "main"
       - name: Install mail command
-        run: sudo apt-get install -y mailutils
-        run: echo "mailutils install"
+        run: | 
+          sudo apt-get install -y mailutils
+          echo "mailutils install"
       - name: Send Email on Success
         if: success()
         run: |

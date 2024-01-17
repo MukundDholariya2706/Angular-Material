@@ -32,16 +32,18 @@ jobs:
           destination-repository-name: "angular-material-build"
           user-email: "mukunddtridhyatech@gmail.com"
           target-branch: "main"
-      - name: Install mail command
-        run: | 
-          sudo apt-get install -y mailutils
-          echo "mailutils install"
+      - name: Check if mailutils is installed
+        run: |
+          if ! command -v mail; then
+            echo "Mailutils is not installed, installing..."
+            sudo apt-get install -y mailutils
+          else
+            echo "Mailutils is already installed."
+          fi
       - name: Send Email on Success
         if: success()
         run: |
-          echo "Subject: Workflow Succeeded" > email.txt
-          echo "Your Workflow has succeeded!" >> email.txt
-          cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
+          mail -s Workflow Succeeded mukunddtridhyatech@gmail.com
         env:
           MAILTO: mukunddtridhyatech@gmail.com
       - name: Send Email on Failure

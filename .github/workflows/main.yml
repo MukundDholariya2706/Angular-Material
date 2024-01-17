@@ -49,6 +49,6 @@ jobs:
         run: |
           echo "Subject: Workflow Failed" > email.txt
           echo "Your workflow has failed! Please check the GitHub Actions logs for details." >> email.txt
-          cat email.txt | mail -s "$(cat email.txt | head -n 1)" mukunddtridhyatech@gmail.com
+          mail -s "Testing fail" mukunddtridhyatech@gmail.com
         env:
           MAILTO: mukunddtridhyatech@gmail.com
